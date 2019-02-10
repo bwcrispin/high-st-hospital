@@ -40,4 +40,23 @@ public class PatientTest {
 		// Assert
 		Assert.assertEquals(hLevel, 10);
 	}
+	
+	@Test
+	public void shouldDamagePatientBlood() {
+		int beforeDamage = testPatient.getBloodLevel();
+		testPatient.damagePatient();
+		testPatient.damagePatient();
+		int afterDamage = testPatient.getBloodLevel();
+		
+		Assert.assertEquals(beforeDamage, afterDamage +4);
+	}
+	
+	@Test
+	public void shouldHealPatient() {
+		int beforeHeal = testPatient.getHealthLevel();
+		testPatient.healPatient();
+		int afterHeal = testPatient.getHealthLevel();
+		
+		Assert.assertEquals(beforeHeal + 2, afterHeal);
+	}
 }
