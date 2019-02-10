@@ -8,8 +8,8 @@ public class Patient {
 		private int healthLevel;
 		
 		
-		final int DEFAULT_BLOOD_LEVEL;
-		final int DEFAULT_HEALTH_LEVEL;
+		static int DEFAULT_BLOOD_LEVEL;
+		static int DEFAULT_HEALTH_LEVEL;
 		
 		public String getName() {
 			return name;
