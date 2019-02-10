@@ -1,7 +1,7 @@
 package hospital;
 
 
-public class MedicalStaff extends Employee implements CanDrawBlood{
+public abstract class MedicalStaff extends Employee implements CanDrawBlood{
 
 	public MedicalStaff(String eID, String name, int salary) {
 		super(eID, name, salary);
@@ -12,6 +12,12 @@ public class MedicalStaff extends Employee implements CanDrawBlood{
 		
 	}
 	
+	public void careForPatient(Patient a) {
+		a.healPatient();
+	}
 	
+	public void givePatientBlood(Patient a) {
+		a.giveBlood();
+	}
 
 }

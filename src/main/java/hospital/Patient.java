@@ -40,6 +40,10 @@ public class Patient {
 			bloodLevel -= 2;
 		}
 		
+		public void giveBlood() {
+			bloodLevel = DEFAULT_BLOOD_LEVEL;
+		}
+		
 		public Patient(String patientID, String name) {
 			this.name = name;
 			this.patientID = patientID;
