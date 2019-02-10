@@ -20,4 +20,15 @@ public class MedicalStaffTest {
 		
 		Assert.assertEquals(beforeDraw -2, afterDraw);
 	}
+	
+	@Test
+	public void shouldGiveBlood() {
+		int beforeGive = testPat.getBloodLevel();
+		testStaff.drawBlood(testPat);
+		testStaff.drawBlood(testPat);
+		testStaff.givePatientBlood(testPat);
+		int afterGive = testPat.getBloodLevel();
+		
+		Assert.assertEquals(beforeGive , afterGive);
+	}
 }
