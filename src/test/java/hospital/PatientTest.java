@@ -59,4 +59,9 @@ public class PatientTest {
 		
 		Assert.assertEquals(beforeHeal + 2, afterHeal);
 	}
+	
+	@Test
+	public void shouldGetStatus() {
+		testPatient.getStatus();
+	}
 }
