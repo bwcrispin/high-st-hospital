@@ -47,8 +47,16 @@ public class Hospital {
 		patients.put(patientToAdd.getPatientID(), patientToAdd);
 	}
 	
+	public void addEmployee(Employee employeeToAdd) {
+		employees.put(employeeToAdd.geteID(), employeeToAdd);
+	}
+	
 	public int getPatientListSize() {
 		return patients.size();
+	}
+	
+	public int getEmployeeListSize() {
+		return employees.size();
 	}
 	
 	/*public void getAllPatientStatus() {
@@ -66,6 +74,10 @@ public class Hospital {
 	
 	public Collection<Patient> getPatients() {
 		return patients.values();
+	}
+	
+	public Collection<Employee> getEmployees() {
+		return employees.values();
 	}
 	
 
