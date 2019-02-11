@@ -9,7 +9,7 @@ public class Patient {
 		
 		
 		static int DEFAULT_BLOOD_LEVEL = 20;
-		static int DEFAULT_HEALTH_LEVEL = 20;
+		static int DEFAULT_HEALTH_LEVEL = 10;
 		
 		public String getName() {
 			return name;
@@ -44,11 +44,16 @@ public class Patient {
 			bloodLevel = DEFAULT_BLOOD_LEVEL;
 		}
 		
+		public void getStatus() {
+			System.out.println(getName() + " has a blood level of " + getBloodLevel() + " and a health level of " + getHealthLevel());
+		}
+		
 		public Patient(String patientID, String name) {
 			this.name = name;
 			this.patientID = patientID;
 			this.bloodLevel = DEFAULT_BLOOD_LEVEL;
 			this.healthLevel = DEFAULT_HEALTH_LEVEL;
 		}
+
 
 }
