@@ -2,8 +2,8 @@ package hospital;
 
 public class Janitor extends Employee {
 
-	public Janitor(String eID, String name, int salary) {
-		super(eID, name, salary);
+	public Janitor(String eID, String name, int salary, String role) {
+		super(eID, name, salary, role);
 		
 	}
 

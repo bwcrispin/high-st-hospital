@@ -6,6 +6,7 @@ public class Patient {
 		private String patientID;
 		private int bloodLevel;
 		private int healthLevel;
+		private String injury;
 		
 		
 		static int DEFAULT_BLOOD_LEVEL = 20;
@@ -28,16 +29,17 @@ public class Patient {
 		}
 		
 		public void damagePatient() {
-			bloodLevel -= 2;
-			healthLevel -= 1;
+			bloodLevel -= 4;
+			healthLevel -= 2;
 		}
 		
 		public void healPatient() {
 			healthLevel += 2;
+			healthLevel = enforceMaxValue(healthLevel);
 		}
 		
 		public void bloodLoss() {
-			bloodLevel -= 2;
+			bloodLevel -= 1;
 		}
 		
 		public void giveBlood() {
@@ -46,6 +48,13 @@ public class Patient {
 		
 		public void getStatus() {
 			System.out.println(getName() + " has a blood level of " + getBloodLevel() + " and a health level of " + getHealthLevel());
+		}
+		
+		public int enforceMaxValue(int value) {
+			if (value > 20) {
+				value = 20;
+			}
+			return value;
 		}
 		
 		public Patient(String patientID, String name) {

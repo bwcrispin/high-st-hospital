@@ -43,12 +43,12 @@ public class Hospital {
 		return employees;
 	}
 	
-	public void addPatient(Patient patientToAdd) {
-		patients.put(patientToAdd.getPatientID(), patientToAdd);
+	public void addPatient(Patient patient) {
+		patients.put(patient.getPatientID(), patient);
 	}
 	
-	public void addEmployee(Employee employeeToAdd) {
-		employees.put(employeeToAdd.geteID(), employeeToAdd);
+	public void addEmployee(Employee employee) {
+		employees.put(employee.geteID(), employee);
 	}
 	
 	public int getPatientListSize() {
@@ -59,19 +59,6 @@ public class Hospital {
 		return employees.size();
 	}
 	
-	/*public void getAllPatientStatus() {
-		List<Patient> patientsByName = new ArrayList<>(patientList.values());
-
-		Collections.sort(patientsByName, Comparator.comparing(Patient::getName));
-
-		for (Patient specificPatient : patientList.values()) {
-			if (specificPatient instanceof Patient) {
-				((Patient) specificPatient).getStatus();
-				System.out.println("");
-			} 
-		}
-	}*/
-	
 	public Collection<Patient> getPatients() {
 		return patients.values();
 	}
@@ -80,5 +67,20 @@ public class Hospital {
 		return employees.values();
 	}
 	
+	public void statusPatientAll() {
+		List<Patient> patientByName = new ArrayList<>(patients.values());
+
+		Collections.sort(patientByName, Comparator.comparing(Patient::getName));
+
+		//System.out.println();
+		for (Patient specificPatient : patientByName) {
+				specificPatient.getStatus();
+				System.out.println("");
+		}
+	}
+	
+	public void endTurn() {
+		statusPatientAll();
+	}
 
 }

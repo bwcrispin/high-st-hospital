@@ -4,8 +4,8 @@ public class Surgeon extends Doctor {
 
 	private boolean operate;
 	
-	public Surgeon(String eID, String name, int salary, String specialty) {
-		super(eID, name, salary, specialty);
+	public Surgeon(String eID, String name, int salary, String role, String specialty) {
+		super(eID, name, salary, specialty, role);
 		this.operate = false;
 	}
 

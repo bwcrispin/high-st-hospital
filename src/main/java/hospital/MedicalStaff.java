@@ -3,8 +3,8 @@ package hospital;
 
 public abstract class MedicalStaff extends Employee implements CanDrawBlood{
 
-	public MedicalStaff(String eID, String name, int salary) {
-		super(eID, name, salary);
+	public MedicalStaff(String eID, String name, int salary, String role) {
+		super(eID, name, salary, role);
 	}
 
 	public void drawBlood(Patient a) {
